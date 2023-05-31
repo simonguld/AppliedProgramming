@@ -1,0 +1,8 @@
+source.o : source.cpp source.h
+        g++ -c source.cpp 
+
+main.o : main.cpp source.h
+        g++ -c main.cpp
+
+main.exe : source.o main.o
+        g++ source.o main.o -o main.exe
